@@ -1,0 +1,28 @@
+.hero-section {
+    display: flex;
+    background: url(../../../assets//image/hero-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    top: -12rem;
+    height: 100vh;
+    padding-top: 16rem;
+
+    &__title {
+        color: var(--white-theme-text-color);
+    }
+
+    &__description {
+        color: var(--white-theme-sub-text-color);
+        padding-top: 50px;
+        font-size: 16px;
+        font-weight: 800;
+
+    }
+
+    h2 {
+        color: var(--white-theme-text-color);
+    }
+
+}
