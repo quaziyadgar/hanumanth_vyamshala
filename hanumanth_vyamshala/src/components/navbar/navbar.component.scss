@@ -35,10 +35,6 @@
 				&:hover {
 					color: var(--white-theme-text-color);
 				}
-
-				// &::after{
-				// 	display: none;
-				// }
 			}
 
 			.dropdown-menu.show {
@@ -49,14 +45,3 @@
 		}
 	}
 }
-
-// .navbar.scrolled {
-// 	height: 100px;
-// 	.container {
-// 		.navbar-brand {
-// 			img {
-// 				height: 5rem !important;
-// 			}
-// 		}
-// 	}
-// }

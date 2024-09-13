@@ -97,7 +97,9 @@ export const CustomNavbar = () => {
                       className={`custom-nav ${
                         index === active ? "active" : ""
                       }`}
-                      onClick={() => {setActive(index)}}
+                      onClick={() => {
+                        setActive(index);
+                      }}
                     >
                       {link.label}
                     </Nav.Link>
@@ -110,10 +112,7 @@ export const CustomNavbar = () => {
                       key={index}
                     >
                       {link.children.map((childLink, key) => (
-                        <NavDropdown.Item
-                          href={childLink.to}
-                          key={key}
-                        >
+                        <NavDropdown.Item href={childLink.to} key={key}>
                           {childLink.label}
                         </NavDropdown.Item>
                       ))}
@@ -139,60 +138,6 @@ export const CustomNavbar = () => {
           </div>
         </Container>
       </Navbar>
-      {/* <header className={`header-section ${scrolled ? "scrolled" : ""}`}>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-lg-2 col-sm-2">
-              <div className="logo">
-                <Link to="/">
-                  <img src={logo} alt="" />
-                </Link>
-              </div>
-            </div>
-            <div className="col-lg-7">
-              <nav className="nav-menu">
-                <ul>
-                  {navLinks.map((link, index) => (
-                    <li
-                      className={`${index === active ? "active" : ""}`}
-                      key={index}
-                      onClick={() => setActive(index)}
-                    >
-                      <Link to={link.to}>{link.label}</Link>
-                      {link.children && (
-                        <ul className="dropdown">
-                          {link.children.map((chileLink, key) => (
-                            <li key={`child${key}`}>
-                              <Link to={chileLink.to}>{chileLink.label}</Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
-            <div className="col-lg-3">
-              <div className="top-option">
-                <div className="to-search search-switch">
-                  <i className="fa fa-search" />
-                </div>
-                <div className="to-social">
-                  {socialLinks.map((link, index) => (
-                    <Link to={link.to} key={index}>
-                      <i className={link.label} aria-hidden="true" />
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="canvas-open">
-            <i className="fa fa-bars" />
-          </div>
-        </div>
-      </header> */}
     </>
   );
 };
